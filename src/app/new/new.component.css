@@ -1,0 +1,16 @@
+button {
+    background-color: rgb(143, 143, 189);
+}
+input{
+    background-color: rgb(197, 194, 202);
+}
+.person{
+    background-color: pink;
+    font-size: 20px;
+    border-radius: 10px;
+}
+
+.people{
+    background-color: lightblue;
+}
+

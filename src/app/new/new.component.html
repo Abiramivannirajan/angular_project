@@ -1,0 +1,80 @@
+<p>{{title}}</p>
+<!-- stringinterpolation   example-->
+<img src = {{product.image}} height="300" width="300">
+<p> name : {{ product.name}}</p>
+<p>  price: {{ product.price}}</p>
+<p> color: {{ product.color}}</p>
+<button on-click ="onclick()">Buy Now </button>
+ 
+
+ <!-- //event binding one way -->
+
+<button on-click ="onclick()"> Alert Message </button>
+
+
+<button (click)=increment()> Increment</button>
+
+<button (click)=decrement()> decrement</button>
+<p> value={{value}} </p>
+<p>  Enter the Number:</p>
+ 
+<!-- // two way binding using ngModel -->
+
+
+<input type="text"placeholder="enter value"[(ngModel)]="somevalue">
+<p>value:{{somevalue}}</p>
+
+<!-- // hidden property binding -->
+
+<div [hidden]="status">
+ The hidden button 
+</div>
+<button (click)="onclicks()">click the view </button>
+
+<!-- *ng model (its struture [for example : add to cart]) -->
+<div class="person" *ngFor ="let i of list"
+
+ [ngClass]="{'person':valfinal ,'people':!valfinal}">
+    <p>{{i}}</p>   
+    <button  (click)="clicked()">hello</button>
+</div>
+<!-- *ngif  - remove the element in app page if its false -->
+ <h1> ngIf</h1>
+ <p *ngIf="result"> Text is rendered when the condition is true </p>
+
+ <!-- else block if not condition is true -->
+
+ <ng-template #elseBlock>
+  text is rendered when condition is false
+</ng-template>
+
+
+
+<!-- checkbox / two way binding-->
+<div>
+    show <input type="checkbox"[(ngModel)]="results">
+</div>
+<p *ngIf="results"> show is checked</p>
+
+
+<!-- ngswitch  -->
+
+<div [ngSwitch] = "change">
+<div *ngSwitchCase="'java'" [ngStyle] = "{ 'background-color' : count > 5 ? 'red' : 'green'}">
+    <p>This is called java</p></div>
+<div *ngSwitchCase="'python'">
+    <p> This is called python</p></div>
+<button (click)="changeview('python')">Click python</button>
+<button (click)="changeview('java')">Click java</button>
+
+</div> 
+<!-- ng style -->
+ <div [ngStyle] = "{ 'color' : count > 5 ? 'red' : 'green'}">
+    {{count}}
+ </div>
+
+ <div [ngStyle]= "{'color' : name =='helooo to all' ?'red' : 'green' }">
+         {{name}}
+ </div>
+
+
